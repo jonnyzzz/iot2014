@@ -1,5 +1,8 @@
 var report = require('./report.js');
 
-report.reportSensors("power", "power", 1);
+for(var i = 0; i < 50000; i++)
+{
+    report.reportSensors("power", "power", 1);
+}
 
 
