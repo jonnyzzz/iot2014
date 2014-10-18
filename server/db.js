@@ -8,6 +8,7 @@ exports.save = function (board, sensor, type, value) {
     version++;
 
     DB.push({
+        date : Date.now(),
         board : board,
         sensor : sensor,
         type : type,
