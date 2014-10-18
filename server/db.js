@@ -33,7 +33,7 @@ var filter = function (getIt) {
     var r = [];
     for (var j = DB.length - 1, i = j; i >= j - 100 && i >= 0; i--) {
         var it = getIt(DB[j]);
-        if (it != null) r.push({key: DB[j].date, value: it});
+        if (it != null) r.push({key: DB[j].date, type:DB[j].type, sensor:DB[j].type, value: it});
     }
 
     return beautify(JSON.stringify(r), {indent_size: 2});
