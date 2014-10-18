@@ -14,6 +14,7 @@
   },
   "homepage": "https://github.com/jonnyzzz/iot2014",
   "dependencies": {
-    "express": "^4.9.8"
+    "express": "^4.9.8",
+    "js-beautify": "^1.5.4"
   }
 }

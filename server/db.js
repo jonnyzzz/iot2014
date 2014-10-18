@@ -1,6 +1,8 @@
 var DB = [];
 var version = 0;
 
+var beautify = require('js-beautify').js_beautify;
+
 exports.save = function (board, sensor, type, value) {
     console.log("Reported data: " + board + ":" + sensor + " [" + type + "] --> " + value);
     version++;
@@ -18,6 +20,6 @@ exports.version = function () {
 };
 
 exports.dump = function () {
-    return JSON.stringify(DB);
+    return beautify(JSON.stringify(DB), { indent_size: 2 });
 };
 
