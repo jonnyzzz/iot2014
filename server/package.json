@@ -1,0 +1,19 @@
+{
+  "name": "smartshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonnyzzz/iot2014"
+  },
+  "author": "Eugene Petrenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonnyzzz/iot2014/issues"
+  },
+  "homepage": "https://github.com/jonnyzzz/iot2014",
+  "dependencies": {
+    "express": "^4.9.8"
+  }
+}
