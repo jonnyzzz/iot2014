@@ -27,11 +27,15 @@ exports.reportSensors = function (sensor, type, value) {
         method: 'GET'
     };
 
-    // Set up the request
-    var post_req = http.request(post_options, function (res) {
-        res.setEncoding('utf8');
-        res.on('data', function (chunk) {
-            console.log('Response: ' + chunk);
-        });
-    }).end();
+    try {
+        // Set up the request
+        http.request(post_options, function (res) {
+            res.setEncoding('utf8');
+            res.on('data', function (chunk) {
+                console.log('Response: ' + chunk);
+            });
+        }).end();
+    } catch (e) {
+        //Git it up
+    }
 };
