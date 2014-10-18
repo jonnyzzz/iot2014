@@ -8,11 +8,11 @@ exports.save = function (board, sensor, type, value) {
     version++;
 
     DB.push({
-        date : Date.now(),
-        board : board,
-        sensor : sensor,
-        type : type,
-        value : value
+        date: Date.now(),
+        board: board,
+        sensor: sensor,
+        type: type,
+        value: value
     });
 };
 
@@ -20,11 +20,44 @@ exports.version = function () {
     return "" + version;
 };
 
-exports.drop = function() {
+exports.drop = function () {
     DB = [];
 };
 
 exports.dump = function () {
-    return beautify(JSON.stringify(DB), { indent_size: 2 });
+    return beautify(JSON.stringify(DB), {indent_size: 2});
 };
+
+
+var filter = function (getIt) {
+    var r = [];
+    for (var j = DB.length - 1, i = j; i >= j - 100 && i >= 0; i--) {
+        var it = getIt(DB[j]);
+        if (it != null) r.push({key: DB[j].date, value: it});
+    }
+
+    return beautify(JSON.stringify(r), {indent_size: 2});
+};
+
+exports.power = function() {
+    return filter(function(x) {
+        if (x.type == "power") return x.value;
+        return null;
+    })
+};
+
+exports.color = function() {
+    return filter(function(x) {
+        if (x.type == "colour") return x.value === "red" ? -1 : 1;
+        return null;
+    })
+};
+
+exports.temp = function() {
+    return filter(function(x) {
+        if (x.type == "temp") return x.value;
+        return null;
+    })
+};
+
 

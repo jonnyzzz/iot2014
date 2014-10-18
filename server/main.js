@@ -21,21 +21,29 @@ router.get("/sensor", function(req, res){
     res.status(201).send("Roger that").end();
 });
 
-router.get('/drop', function() {
+router.get('/drop', function(res) {
     db.drop();
     res.status(200).send("Roger that").end();
 });
 
-router.get("/data", function(req, res){
-   res
-       .status(200)
-       .set({
-           'Content-Type' : 'text/javascript',
-           'ETag' : db.version()
-       })
-       .send(db.dump())
-       .end();
-});
+var jsonny = function(path, data) {
+    router.get(path, function(req, res){
+        res
+            .status(200)
+            .set({
+                'Content-Type' : 'text/javascript',
+                'ETag' : db.version()
+            })
+            .send(data())
+            .end();
+    })
+};
+
+jsonny("/data/color", function() {return db.color();});
+jsonny("/data/power", function() {return db.power();});
+jsonny("/data/temp", function() {return db.temp();});
+jsonny("/data", function() {return db.dump();});
+
 
 app.use(router);
 app.listen(3000);
