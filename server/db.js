@@ -5,7 +5,12 @@ exports.save = function (board, sensor, type, value) {
     console.log("Reported data: " + board + ":" + sensor + " [" + type + "] --> " + value);
     version++;
 
-
+    DB.push({
+        board : board,
+        sensor : sensor,
+        type : type,
+        value : value
+    });
 };
 
 exports.version = function () {
