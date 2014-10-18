@@ -21,6 +21,10 @@ router.get("/sensor", function(req, res){
     res.status(201).send("Roger that").end();
 });
 
+router.get('/drop', function() {
+    db.drop();
+    res.status(200).send("Roger that").end();
+});
 
 router.get("/data", function(req, res){
    res

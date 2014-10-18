@@ -20,6 +20,10 @@ exports.version = function () {
     return "" + version;
 };
 
+exports.drop = function() {
+    DB = [];
+};
+
 exports.dump = function () {
     return beautify(JSON.stringify(DB), { indent_size: 2 });
 };
