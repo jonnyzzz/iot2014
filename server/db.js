@@ -60,4 +60,11 @@ exports.temp = function() {
     })
 };
 
+exports.sound = function() {
+    return filter(function(x) {
+        if (x.type == "sound") return x.value;
+        return null;
+    })
+};
+
 
