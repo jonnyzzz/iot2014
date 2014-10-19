@@ -8,14 +8,20 @@ var board = "j-" + (function () {
         return require('crypto').createHash('sha1').update(current_date + random).digest('hex');
     })();
 
+var running = false;
+var resetRunning = function() { running = false;};
+
 exports.reportSensors = function (sensor, type, value) {
-    while(DATA.length > 1000) DATA.pop();
-    DATA.push({sensor:sensor, type : type, value : value});
+    if (running) return;
+    setTimeout(function() {
+        reportSensorsInternal(sensor, type, value, resetRunning);
+    }, 1);
 };
 
-var DATA = [];
-
 var reportSensorsInternal = function (sensor, type, value, callback) {
+    if (running) return;
+    running = true;
+
     // Build the post string from an object
     var post_data = querystring.stringify({
         board: board,
@@ -31,7 +37,9 @@ var reportSensorsInternal = function (sensor, type, value, callback) {
         host: 'jonnyzzz-edison.local',
         port: '3000',
         path: '/sensor?' + post_data,
-        method: 'GET'
+        method: 'GET',
+        timeout: 1000,
+        keepAlive: false
     };
 
     try {
@@ -39,27 +47,12 @@ var reportSensorsInternal = function (sensor, type, value, callback) {
         http
             .request(post_options, function (res) {
                 res.setEncoding('utf8');
-                res.on('data', function (chunk) {
-                    console.log('Response: ' + chunk);
-                });
+                res.on('data', function (chunk) { });
+                callback();
             }).on("error", function () {
-                ///NOP
-            }).on("end", function () {
                 callback();
             }).end();
     } catch (e) {
         //Git it up
     }
 };
-
-function reportIfNeeded() {
-    if (DATA.length != 0) {
-        var x = DATA.pop();
-
-        reportSensorsInternal(x.sensor, x.type, x.value, reportIfNeeded);
-    } else {
-        setTimeout(reportIfNeeded, 200);
-    }
-}
-
-reportIfNeeded();
