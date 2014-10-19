@@ -25,19 +25,32 @@ var analogPin0 = new mraa.Aio(1); //setup access analog input Analog pin #1 (A1)
 
 var report = require('./report.js');
 
+var toggle = true;
 periodicActivity(); //call the periodicActivity function
 
 function periodicActivity()
 {
-    var temp = new groveSensor.GroveTemp(0);
-    console.log(temp.value());      
-        
-    //report.reportSensors("temperature", "temperature", temp);
+    //var uni=true;
+    //while(uni)
+    //{
+    //console.log("start");
+    if(toggle)
+    {
+        //console.log("temp");
+        var temp = new groveSensor.GroveTemp(0);
+        //console.log(temp.value());      
+        report.reportSensors("temperature", "temperature", temp.value());
+    }
+    else
+    {
+        //console.log("sound");
+        var analogValue = analogPin0.read(); //read the value of the analog pin
+        //console.log(analogValue);
+        report.reportSensors("sound", "sound", analogValue);
+    }
+    //console.log("peri");
+    toogle =!toggle;
+    setTimeout(periodicActivity, 500); //call the indicated function after 1 second (1000 milliseconds)
     
-    var analogValue = analogPin0.read(); //read the value of the analog pin
-    console.log(analogValue);
-        
-    //report.reportSensors("sound", "sound", analogValue);
-    
-    setTimeout(periodicActivity, 100); //call the indicated function after 1 second (1000 milliseconds)
+    //}
 }

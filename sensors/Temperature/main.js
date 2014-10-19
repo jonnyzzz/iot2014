@@ -30,5 +30,5 @@ function periodicActivity()
         
     //report.reportSensors("temperature", "temperature", temp);
     
-    setTimeout(periodicActivity, 100); //call the indicated function after 1 second (1000 milliseconds)
+    setTimeout(periodicActivity, 500); //call the indicated function after 1 second (1000 milliseconds)
 }
