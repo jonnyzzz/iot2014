@@ -55,7 +55,7 @@ exports.color = function() {
 
 exports.temp = function() {
     return filter(function(x) {
-        if (x.type == "temp") return x.value;
+        if (x.type == "temp" || x.type == "temperature") return x.value;
         return null;
     })
 };
