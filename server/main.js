@@ -1,5 +1,14 @@
 var express = require('express');
+
+var cors = require('cors');
+var corsOptions = {
+    origin:         '*',
+    methods:        ['GET', 'PUT', 'POST', 'DELETE']
+};
+
 var app = express();
+app.use(cors(corsOptions));
+
 var router = express.Router();
 
 
