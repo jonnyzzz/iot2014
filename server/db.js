@@ -67,4 +67,11 @@ exports.sound = function() {
     })
 };
 
+exports.touch = function() {
+    return filter(function(x) {
+        if (x.type == "touch") return x.value;
+        return null;
+    })
+};
+
 

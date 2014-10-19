@@ -52,6 +52,7 @@ jsonny("/data/color", function() {return db.color();});
 jsonny("/data/power", function() {return db.power();});
 jsonny("/data/temp", function() {return db.temp();});
 jsonny("/data/sound", function() {return db.sound();});
+jsonny("/data/touch", function() {return db.touch();});
 jsonny("/data", function() {return db.dump();});
 
 
