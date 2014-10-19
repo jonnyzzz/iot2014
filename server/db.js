@@ -67,4 +67,22 @@ exports.sound = function() {
     })
 };
 
+exports.touch = function() {
+    return filter(function(x) {
+        if (x.type == "touch") return x.value;
+        return null;
+    })
+};
+
+exports.touchCounts = function() {
+    var count = 0;
+    for (var j = DB.length - 1, i = j; i >= j - 100 && i >= 0; i--) {
+        if (DB[j].type == "touch" && DB[j].value === "1") {
+            count ++;
+        }
+    }
+
+    return beautify(JSON.stringify({touch: count}), {indent_size: 2});
+};
+
 
