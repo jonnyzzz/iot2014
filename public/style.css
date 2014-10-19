@@ -1,0 +1,345 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+    outline: 0;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('fonts/opensans/OpenSans-Regular-webfont.eot');
+    src: url('fonts/opensans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans/OpenSans-Regular-webfont.woff') format('woff'), url('fonts/opensans/OpenSans-Regular-webfont.ttf') format('truetype'), url('fonts/opensans/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('fonts/opensans/OpenSans-Light-webfont.eot');
+    src: url('fonts/opensans/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans/OpenSans-Light-webfont.woff') format('woff'), url('fonts/opensans/OpenSans-Light-webfont.ttf') format('truetype'), url('fonts/opensans/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanslight_italic';
+    src: url('fonts/opensans/OpenSans-LightItalic-webfont.eot');
+    src: url('fonts/opensans/OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans/OpenSans-LightItalic-webfont.woff') format('woff'), url('fonts/opensans/OpenSans-LightItalic-webfont.ttf') format('truetype'), url('fonts/opensans/OpenSans-LightItalic-webfont.svg#open_sanslight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanssemibold_italic';
+    src: url('fonts/opensans/OpenSans-SemiboldItalic-webfont.eot');
+    src: url('fonts/opensans/OpenSans-SemiboldItalic-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans/OpenSans-SemiboldItalic-webfont.woff') format('woff'), url('fonts/opensans/OpenSans-SemiboldItalic-webfont.ttf') format('truetype'), url('fonts/opensans/OpenSans-SemiboldItalic-webfont.svg#open_sanssemibold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('fonts/opensans/OpenSans-Bold-webfont.eot');
+    src: url('fonts/opensans/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans/OpenSans-Bold-webfont.woff') format('woff'), url('fonts/opensans/OpenSans-Bold-webfont.ttf') format('truetype'), url('fonts/opensans/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('fonts/opensans/OpenSans-Semibold-webfont.eot');
+    src: url('fonts/opensans/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans/OpenSans-Semibold-webfont.woff') format('woff'), url('fonts/opensans/OpenSans-Semibold-webfont.ttf') format('truetype'), url('fonts/opensans/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansbold_italic';
+    src: url('fonts/opensans/OpenSans-BoldItalic-webfont.eot');
+    src: url('fonts/opensans/OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/opensans/OpenSans-BoldItalic-webfont.woff') format('woff'),
+    url('fonts/opensans/OpenSans-BoldItalic-webfont.ttf') format('truetype'),
+    url('fonts/opensans/OpenSans-BoldItalic-webfont.svg#open_sansbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansitalic';
+    src: url('fonts/opensans/OpenSans-Italic-webfont.eot');
+    src: url('fonts/opensans/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/opensans/OpenSans-Italic-webfont.woff') format('woff'),
+    url('fonts/opensans/OpenSans-Italic-webfont.ttf') format('truetype'),
+    url('fonts/opensans/OpenSans-Italic-webfont.svg#open_sansitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fleetster-icons';
+    src: url('fonts/fleetster-icons.eot?138894');
+    src: url('fonts/fleetster-icons.eot?138894#iefix') format('embedded-opentype'), url('fonts/fleetster-icons.woff?138894') format('woff'), url('fonts/fleetster-icons.ttf?138894') format('truetype'), url('fonts/fleetster-icons.svg?138894#fleetster-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fleetster-icons";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    /*margin-right: .2em;*/
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    /*margin-left: .2em;*/
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+
+.icon-resize:before { content: '\e800'; } /* '' */
+.icon-firefox:before { content: '\e863'; } /* '' */
+.icon-up:before { content: '\e802'; } /* '' */
+.icon-back:before { content: '\e803'; } /* '' */
+.icon-forward:before { content: '\e804'; } /* '' */
+.icon-check:before { content: '\e805'; } /* '' */
+.icon-ex:before { content: '\e806'; } /* '' */
+.icon-action:before { content: '\e807'; } /* '' */
+.icon-magnifier:before { content: '\e808'; } /* '' */
+.icon-plus:before { content: '\e809'; } /* '' */
+.icon-open-front:before { content: '\e80a'; } /* '' */
+.icon-up-small:before { content: '\e80b'; } /* '' */
+.icon-down-small:before { content: '\e80c'; } /* '' */
+.icon-dropdown:before { content: '\e80d'; } /* '' */
+.icon-trash-can:before { content: '\e80e'; } /* '' */
+.icon-view:before { content: '\e80f'; } /* '' */
+.icon-chain:before { content: '\e810'; } /* '' */
+.icon-message:before { content: '\e811'; } /* '' */
+.icon-keys:before { content: '\e812'; } /* '' */
+.icon-analysis:before { content: '\e813'; } /* '' */
+.icon-calendar:before { content: '\e814'; } /* '' */
+.icon-agenda:before { content: '\e815'; } /* '' */
+.icon-building:before { content: '\e816'; } /* '' */
+.icon-cost-analysis:before { content: '\e817'; } /* '' */
+.icon-user-analysis:before { content: '\e818'; } /* '' */
+.icon-vehicle-analysis:before { content: '\e819'; } /* '' */
+.icon-business:before { content: '\e81a'; } /* '' */
+.icon-private:before { content: '\e81b'; } /* '' */
+.icon-car-check:before { content: '\e81c'; } /* '' */
+.icon-car-ex:before { content: '\e81d'; } /* '' */
+.icon-car-question-mark:before { content: '\e81e'; } /* '' */
+.icon-unknown-user:before { content: '\e81f'; } /* '' */
+.icon-user:before { content: '\e820'; } /* '' */
+.icon-pin-return:before { content: '\e821'; } /* '' */
+.icon-pin-small:before { content: '\e822'; } /* '' */
+.icon-arrival:before { content: '\e823'; } /* '' */
+.icon-departure:before { content: '\e824'; } /* '' */
+.icon-plus-small:before { content: '\e825'; } /* '' */
+.icon-icon-redo-small:before { content: '\e826'; } /* '' */
+.icon-gears:before { content: '\e827'; } /* '' */
+.icon-printer:before { content: '\e828'; } /* '' */
+.icon-letter:before { content: '\e829'; } /* '' */
+.icon-booking:before { content: '\e82a'; } /* '' */
+.icon-settings:before { content: '\e82b'; } /* '' */
+.icon-go-to:before { content: '\e82c'; } /* '' */
+.icon-house:before { content: '\e82d'; } /* '' */
+.icon-plane:before { content: '\e82e'; } /* '' */
+.icon-train:before { content: '\e82f'; } /* '' */
+.icon-vehicle:before { content: '\e830'; } /* '' */
+.icon-tag:before { content: '\e831'; } /* '' */
+.icon-folder:before { content: '\e832'; } /* '' */
+.icon-down:before { content: '\e801'; } /* '' */
+.icon-star:before { content: '\e834'; } /* '' */
+.icon-heart:before { content: '\e835'; } /* '' */
+.icon-contacts:before { content: '\e836'; } /* '' */
+.icon-check-small:before { content: '\e837'; } /* '' */
+.icon-euro:before { content: '\e838'; } /* '' */
+.icon-sold:before { content: '\e839'; } /* '' */
+.icon-close:before { content: '\e83a'; } /* '' */
+.icon-lock:before { content: '\e83b'; } /* '' */
+.icon-redo:before { content: '\e83c'; } /* '' */
+.icon-unmarked:before { content: '\e83d'; } /* '' */
+.icon-marked:before { content: '\e83e'; } /* '' */
+.icon-pricing:before { content: '\e83f'; } /* '' */
+.icon-checked:before { content: '\e840'; } /* '' */
+.icon-slider:before { content: '\e841'; } /* '' */
+.icon-greenpoints:before { content: '\e842'; } /* '' */
+.icon-info:before { content: '\e843'; } /* '' */
+.icon-gear:before { content: '\e844'; } /* '' */
+.icon-x-number:before { content: '\e845'; } /* '' */
+.icon-3-times:before { content: '\e846'; } /* '' */
+.icon-svg-69:before { content: '\e847'; } /* '' */
+.icon-bag:before { content: '\e848'; } /* '' */
+.icon-man:before { content: '\e849'; } /* '' */
+.icon-pin:before { content: '\e84a'; } /* '' */
+.icon-business-car:before { content: '\e84b'; } /* '' */
+.icon-private-car:before { content: '\e84c'; } /* '' */
+.icon-compass:before { content: '\e84d'; } /* '' */
+.icon-km:before { content: '\e84e'; } /* '' */
+.icon-license:before { content: '\e84f'; } /* '' */
+.icon-unchecked:before { content: '\e850'; } /* '' */
+.icon-unactive:before { content: '\e851'; } /* '' */
+.icon-shopping-cart:before { content: '\e852'; } /* '' */
+.icon-svg-81:before { content: '\e853'; } /* '' */
+.icon-cars:before { content: '\e854'; } /* '' */
+.icon-users-1:before { content: '\e855'; } /* '' */
+.icon-locations-1:before { content: '\e856'; } /* '' */
+.icon-log-out:before { content: '\e859'; } /* '' */
+.icon-zoom-out:before { content: '\e858'; } /* '' */
+.icon-zoom-in:before { content: '\e857'; } /* '' */
+.icon-open-back:before { content: '\e85a'; } /* '' */
+.icon-pencil:before { content: '\e85b'; } /* '' */
+.icon-tobeconfirmed:before { content: '\e85c'; } /* '' */
+.icon-ongoing:before { content: '\e85d'; } /* '' */
+.icon-pending:before { content: '\e85e'; } /* '' */
+.icon-canceled:before { content: '\e85f'; } /* '' */
+.icon-finished:before { content: '\e860'; } /* '' */
+.icon-created:before { content: '\e861'; } /* '' */
+.icon-warning:before { content: '\e862'; } /* '' */
+.icon-users:before { content: '\e864'; } /* '' */
+.icon-locations:before { content: '\e865'; } /* '' */
+.icon-vehicles:before { content: '\e866'; } /* '' */
+.icon-network:before { content: '\e833'; } /* '' */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+ol, ul {
+    list-style: none
+}
+
+blockquote, q {
+    quotes: none
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+table td {
+    vertical-align: middle;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "open_sansregular";
+    font-size: 15px;
+}
+
+.app-background {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.app-background img {
+    width: 100%;
+    height: 100%;
+}
+
+.deploy-screen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15000;
+    font-family: "open_sanssemibold_italic";
+    font-size: 35px;
+    color: #555b60;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.deploy-screen .deploy-screen-message-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 350px;
+    margin-top: -175px
+}
+
+.deploy-screen .deploy-screen-message-container .deploy-screen-message-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    -khtml-opacity: .7;
+    -moz-opacity: .7;
+    opacity: .7;
+    -ms-filter: "alpha(opacity=(70))";
+    filter: alpha(opacity=70)
+}
+
+.deploy-screen .deploy-screen-message-container .deploy-screen-message-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1024px;
+    height: 280px;
+    margin-top: -140px;
+    margin-left: -512px;
+    font-family: 'open_sanslight'
+}
+
+.deploy-screen .deploy-screen-message-container .deploy-screen-message-text .icon-compass {
+    width: 30%;
+    padding-right: 40px;
+    font-size: 60px;
+    text-align: right
+}
+
+.deploy-screen .deploy-screen-message-container .deploy-screen-message-text .deploy-screen-message-text-description {
+    width: 70%;
+    padding-top: 20px;
+    font-size: 15px;
+    line-height: 20px
+}
+
+.deploy-screen .deploy-screen-message-container .deploy-screen-message-text .deploy-screen-message-text-footer {
+    padding-top: 20px;
+    font-family: 'open_sanssemibold';
+    font-size: 25px;
+    line-height: 30px;
+    color: #1d88bb;
+    text-decoration: none
+}
