@@ -56,6 +56,8 @@ jsonny("/data/touch", function() {return db.touch();});
 jsonny("/data/touch/count", function() {return db.touchCounts();});
 jsonny("/data", function() {return db.dump();});
 
+
+app.use(express.static(path.join(__dirname, 'public'))); //  "public" off of current is root
 app.use(router);
 app.listen(3000);
 
