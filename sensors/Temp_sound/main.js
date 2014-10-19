@@ -18,6 +18,10 @@ Article: https://software.intel.com/en-us/html5/articles/intel-xdk-iot-edition-n
 */
 
 var groveSensor = require('jsupm_grove'); 
+var mraa = require('mraa'); //require mraa
+console.log('MRAA Version: ' + mraa.getVersion()); //write the mraa version to the console
+
+var analogPin0 = new mraa.Aio(1); //setup access analog input Analog pin #1 (A1)
 
 var report = require('./report.js');
 
@@ -29,6 +33,11 @@ function periodicActivity()
     console.log(temp.value());      
         
     //report.reportSensors("temperature", "temperature", temp);
+    
+    var analogValue = analogPin0.read(); //read the value of the analog pin
+    console.log(analogValue);
+        
+    //report.reportSensors("sound", "sound", analogValue);
     
     setTimeout(periodicActivity, 100); //call the indicated function after 1 second (1000 milliseconds)
 }
