@@ -48,7 +48,7 @@ exports.power = function() {
 
 exports.color = function() {
     return filter(function(x) {
-        if (x.type == "colour") return x.value === "red" ? -1 : 1;
+        if (x.type == "colour") return x.value || 0 > 0 ? -1 : 1;
         return null;
     })
 };
